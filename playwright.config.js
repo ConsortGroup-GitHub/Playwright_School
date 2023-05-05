@@ -31,7 +31,7 @@ module.exports = defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    video: 'on',
+    video: 'retain-on-failure',
     // launchOptions: {
     //   slowMo: 1000
     // },
