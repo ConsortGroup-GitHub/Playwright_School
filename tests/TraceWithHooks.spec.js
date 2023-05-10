@@ -2,12 +2,29 @@
 
 import { test, expect } from '@playwright/test';
 
-test('record demo test', async ({ page, context }) => {
-  
+let context
+let page
+
+test.beforeAll(async ({ browser }) => {
+  context = await browser.newContext()
+  await context.tracing.start(
+    {
+      snapshots: true,
+      screenshots: true
+    })
+  page = await context.newPage()
+})
+
+test.afterAll(async () => {
+  await context.tracing.stop({ path: 'test2_trace.zip' })
+})
+
+test('record demo test 2', async () => {
+
   //await context.tracing.start({snapshots: true, screenshots: true})
-  
+
   await page.goto('https://www.saucedemo.com/');
-  
+
   // permet de mettre l'exécution en pause, et de faire du Debug avec Inspector :
   //await page.pause();
 
@@ -21,3 +38,4 @@ test('record demo test', async ({ page, context }) => {
   //await context.tracing.stop({path: 'test1_trace.zip'})
 
 });
+
