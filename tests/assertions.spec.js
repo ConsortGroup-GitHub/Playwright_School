@@ -25,6 +25,7 @@ test('Assertions Demo', async ({ page }) => {
     await expect(page.locator('#__next > div > div > section > div > h1')).toContainText('he Kitch')
     await expect(page.locator('#__next > div > div > section > div > h1')).not.toHaveText('The Bathroom')
 
+
     // Assertion Attribut (ici un attribut class) :
     await expect(page.locator('#__next > div > div > section > div > div > a:nth-child(1) > h3')).toHaveAttribute('class', 'chakra-heading css-zey6tx')
     // OU
