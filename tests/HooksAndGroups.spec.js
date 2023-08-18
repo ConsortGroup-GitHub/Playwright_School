@@ -11,6 +11,8 @@ test.describe('All My Tests', () => {
         await page.waitForURL('https://www.saucedemo.com/inventory.html')
     })
 
+    // Modif en commentaire
+
     test.afterAll(async ({ page }) => {
         await page.close()
     })
