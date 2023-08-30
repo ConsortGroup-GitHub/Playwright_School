@@ -36,7 +36,7 @@ test('Assertions Demo', async ({ page }) => {
     await expect(page.locator('#__next > div > div > section > div > div > a:nth-child(1) > h3')).toHaveClass(/.*css-zey6tx/)
 
     // permet de mettre l'exécution en pause, et de faire du Debug avec Inspector :
-    //await page.pause()
+    // await page.pause()
 
     // Assertion de l'URL :
     await expect(page).toHaveURL('https://kitchen.applitools.com/')

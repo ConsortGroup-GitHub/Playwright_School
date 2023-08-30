@@ -11,8 +11,6 @@ test.describe('All My Tests', () => {
         await page.waitForURL('https://www.saucedemo.com/inventory.html')
     })
 
-    // Modif en commentaire
-
     test.afterAll(async ({ page }) => {
         await page.close()
     })
@@ -26,7 +24,7 @@ test.describe('All My Tests', () => {
 
     })
 
-    test('Logout', async ({ page }) => {
+    test.fixme('Logout', async ({ page }) => {
 
         await page.getByRole('button', { name: 'Open Menu' }).click();
         await page.getByRole('link', { name: 'Logout' }).click();

@@ -33,7 +33,7 @@ module.exports = defineConfig({
   use: {
     video: 'on-first-retry',
     launchOptions: {
-      slowMo: 1000
+      slowMo: 500
     },
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
