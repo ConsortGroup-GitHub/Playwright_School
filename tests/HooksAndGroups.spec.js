@@ -24,7 +24,7 @@ test.describe('All My Tests', () => {
 
     })
 
-    test.fixme('Logout', async ({ page }) => {
+    test('Logout', async ({ page }) => {
 
         await page.getByRole('button', { name: 'Open Menu' }).click();
         await page.getByRole('link', { name: 'Logout' }).click();
