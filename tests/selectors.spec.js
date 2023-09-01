@@ -15,8 +15,8 @@ test('Selectors Demo', async ({ page }) => {
 //   await page.locator('#login-button').click()
 
 // Utilisation du texte :
-  await page.locator('text=LOGIN').click()
-  //await page.locator('input:has-text("LOGI")').click()
+  //await page.locator('text=LOGIN').click()
+  await page.locator('input:has-text("LOGI")').click()
   
 
 });
