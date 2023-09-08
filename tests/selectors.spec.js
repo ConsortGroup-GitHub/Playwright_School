@@ -18,6 +18,4 @@ test('Selectors Demo', async ({ page }) => {
   //await page.locator('text=LOGIN').click()
   await page.locator('input:has-text("LOGI")').click()
   
-
 });
-
