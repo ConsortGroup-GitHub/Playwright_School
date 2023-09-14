@@ -16,7 +16,7 @@ test.describe('All My Tests', () => {
     })
 
     test('Homepage', async ({ page }) => {
-
+        // Ajout d'un commentaire dans ce test 'Homepage" !
         await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
         await page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
         await page.locator('#item_1_title_link').click();
